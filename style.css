@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fafaf6;
@@ -11,10 +16,12 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 90vw;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
+
 
 .header {
   display: flex;
@@ -30,11 +37,10 @@ body {
   letter-spacing: -0.2px;
 }
 
-.hero {
+.hero-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
 .hero-content {
@@ -84,10 +90,12 @@ body {
   font-size: 1rem;
 }
 
-.image-block {
-  flex: 1 1 400px;
-  text-align: center;
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
+
 
 
 
@@ -96,7 +104,6 @@ body {
   .hero-content {
     flex-direction: column;
     text-align: center;
-    position: relative;
   }
 
   .text-block h1 {
@@ -333,6 +340,18 @@ body {
 
 .footer-link:hover {
   color: #000000;
+}
+
+
+@media screen and (max-width: 640px) {
+  .logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header {
+    justify-content: center;
+  }
 }
 
 
