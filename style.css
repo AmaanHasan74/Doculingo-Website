@@ -96,6 +96,7 @@ body {
   .hero-content {
     flex-direction: column;
     text-align: center;
+    position: relative;
   }
 
   .text-block h1 {
